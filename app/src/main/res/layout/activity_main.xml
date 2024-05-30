@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature Conversion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/tempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/temperature"
+        app:layout_constraintBottom_toBottomOf="@+id/userTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userTemp" />
+
+    <TextView
+        android:id="@+id/convLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/conversion"
+        app:layout_constraintStart_toStartOf="@+id/tempLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tempLabel" />
+
+    <TextView
+        android:id="@+id/finalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/convLabel"
+        app:layout_constraintStart_toEndOf="@+id/convLabel" />
+
+    <Button
+        android:id="@+id/ctoFarButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/farenheit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalValue" />
+
+    <Button
+        android:id="@+id/fToCelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/celsius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctoFarButton" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fToCelButton" />
+
+    <EditText
+        android:id="@+id/userTemp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/temperature_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tempLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
